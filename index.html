@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Switching action field in HTML form - Example 1</title>
+	<link rel="STYLESHEET" type="text/css" href="style/index.css">
+</head>
+
+<body>
+<SCRIPT language="JavaScript">
+function OnSubmitForm()
+{
+	if(document.pressed == 'Insert')
+	{
+		document.myform.action ="insert.html";
+	}
+	else
+	if(document.pressed == 'Update')
+	{
+		document.myform.action ="update.html";
+	}
+	return true;
+}
+</SCRIPT>
+<FORM name="myform" onSubmit="return OnSubmitForm();">
+<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<div class="logo"></div>
+<div class = "login-block">
+<h1>Login<h1>
+<INPUT TYPE="TEXT" Name="name" id="username" placeholder="Name"><br>
+<INPUT TYPE="TEXT" Name="name" id="password" placeholder="Membership ID"><br>
+<INPUT TYPE="SUBMIT" name="Operation" onClick="document.pressed=this.value" VALUE="Sign Up" id="submit">
+<INPUT TYPE="SUBMIT" name="Operation" onClick="document.pressed=this.value" VALUE="Surf Wireless" id="submit">
+</FORM>
+</div>
+</body>
+</html>
